@@ -46,7 +46,7 @@
                             <td>{{ $key+1 }}</td>
                             <td> <a href="{{ route('edit_booking',$item->id) }}"> {{ $item->code }} </a></td>
                             <td> {{ $item->created_at->format('d/m/Y') }} </td>
-                            <td> {{ $item['user']['name'] }} </td>
+                            <td> {{ @$item['user']['name'] }} </td>
                             <td> {{ $item['room']['type']['name'] }} </td>
                             <td> <span class="badge bg-primary">{{ $item->check_in }}</span>  /<br> <span class="badge bg-warning text-dark">{{ $item->check_out }}</span> </td>
                             <td> {{ $item->number_of_rooms }} </td>
@@ -64,7 +64,7 @@
                                  @endif 
                             </td>
                             <td>
-                                <a href="{{ route('edit.team',$item->id) }}" class="btn btn-warning px-3 radius-30"> Edit</a>
+                                <a href="{{ route('edit_booking',$item->id) }}" class="btn btn-warning px-3 radius-30"> Edit</a>
                                 <a href="{{ route('delete.team',$item->id) }}" class="btn btn-danger px-3 radius-30" id="delete"> Delete</a>
                             </td>
                         </tr>

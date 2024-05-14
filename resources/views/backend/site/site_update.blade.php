@@ -28,7 +28,7 @@
     <form action="{{ route('site.update') }}" method="post" enctype="multipart/form-data">
                 @csrf
 
-    <input type="hidden" name="id" value="{{ $site->id }}">
+    <input type="hidden" name="id" value="{{ @$site->id }}">
 
             <div class="card-body">
                 <div class="row mb-3">
@@ -36,7 +36,7 @@
                         <h6 class="mb-0"> phone </h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        <input type="text" name="phone" class="form-control" value="{{ $site->phone }}"  />
+                        <input type="text" name="phone" class="form-control" value="{{ @$site->phone }}"  />
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -44,7 +44,7 @@
                         <h6 class="mb-0">address</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        <input type="text" name="address"  class="form-control"  value="{{ $site->address }}"  />
+                        <input type="text" name="address"  class="form-control"  value="{{ @$site->address }}"  />
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -52,7 +52,7 @@
                         <h6 class="mb-0">email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        <input type="email" name="email" class="form-control"  value="{{ $site->email }}"   />
+                        <input type="email" name="email" class="form-control"  value="{{ @$site->email }}"   />
                     </div>
                 </div>
 
@@ -61,7 +61,7 @@
                         <h6 class="mb-0">facebook</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        <input type="text" name="facebook" class="form-control"  value="{{ $site->facebook }}"   />
+                        <input type="text" name="facebook" class="form-control"  value="{{ @$site->facebook }}"   />
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@
                         <h6 class="mb-0">	twitter</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        <input type="text" name="twitter" class="form-control"  value="{{ $site->twitter }}"   />
+                        <input type="text" name="twitter" class="form-control"  value="{{ @$site->twitter }}"   />
                     </div>
                 </div>
 
@@ -81,7 +81,7 @@
                         <h6 class="mb-0">copyright</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        <input type="text" name="copyright" class="form-control"  value="{{ $site->copyright }}"   />
+                        <input type="text" name="copyright" class="form-control"  value="{{ @$site->copyright }}"   />
                     </div>
                 </div>
 
@@ -94,7 +94,7 @@
                         <input type="file" name="logo" class="form-control"    />
 
 
-                         <img src="{{ asset($site->logo) }}" alt="" style="width: 100px; height:100px;">
+                         <img src="{{ @asset($site->logo) }}" alt="" style="width: 100px; height:100px;">
                     </div>
                 </div>
 

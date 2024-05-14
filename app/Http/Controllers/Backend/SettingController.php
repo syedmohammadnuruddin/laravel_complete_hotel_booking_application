@@ -50,7 +50,7 @@ class SettingController extends Controller
         $sitesetting = SiteSetting::find($site_id);
         if($request->file('logo')){
             // Delete the existing image if it exists
-            if($sitesetting->logo){
+            if(@$sitesetting->logo){
                 $image_path = public_path($sitesetting->logo);
                 if(file_exists($image_path)){
                     unlink($image_path);

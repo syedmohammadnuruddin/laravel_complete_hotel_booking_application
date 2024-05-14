@@ -42,7 +42,7 @@
             </ul>
         </li>
         @endif
-        @if(Auth::user()->can('bookarea.menu'))
+        {{-- @if(Auth::user()->can('bookarea.menu')) --}}
         <li>
             <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bx bx-category"></i>
@@ -50,14 +50,14 @@
                 <div class="menu-title">Manage Book Area </div>
             </a>
             <ul>
-                @if(Auth::user()->can('update.bookarea'))
+                {{-- @if(Auth::user()->can('update.bookarea')) --}}
                 <li> <a href="{{ route('book.area') }}"><i class='bx bx-radio-circle'></i>Update BookArea </a>
                 </li> 
-                @endif
+                {{-- @endif --}}
 
             </ul>
         </li>
-        @endif
+        {{-- @endif --}}
         <li>
             <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bx bx-category"></i>
@@ -225,7 +225,7 @@
 
         <li class="menu-label">Others</li>
         <li>
-            <a href="https://themeforest.net/user/codervent" target="_blank">
+            <a href="{{route('contact.us')}}" target="_blank">
                 <div class="parent-icon"><i class="bx bx-support"></i>
                 </div>
                 <div class="menu-title">Support</div>

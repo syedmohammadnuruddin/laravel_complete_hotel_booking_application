@@ -33,7 +33,7 @@
 
                             <li>
                                 <i class='bx bx-user'></i>
-                                {{ $blog['user']['name'] }}
+                                {{ @$blog['user']['name'] }}
                             </li>
 
                             <li>

@@ -21,11 +21,11 @@
                     <ul>
                         <li>
                             <i class='bx bx-home-alt'></i>
-                            <a href="#">{{$setting->address}}</a>
+                            <a href="#">{{@$setting->address}}</a>
                         </li>
                         <li>
                             <i class='bx bx-phone-call'></i>
-                            <a href="{{$setting->phone}}">{{$setting->phone}}</a>
+                            <a href="{{@$setting->phone}}">{{@$setting->phone}}</a>
                         </li>
                     @auth
                         <li>

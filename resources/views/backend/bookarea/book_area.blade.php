@@ -26,14 +26,14 @@
 <form id="myForm" action="{{ route('book.area.update') }}" method="post" enctype="multipart/form-data">
     @csrf
 
-<input type="hidden" name="id" id="" value="{{$book->id}}">
+<input type="hidden" name="id" id="" value="{{@$book->id}}">
 <div class="card-body">
     <div class="row mb-3">
         <div class="col-sm-3">
             <h6 class="mb-0"> Short Title</h6>
         </div>
         <div class="form-group col-sm-9 text-secondary">
-            <input type="text" name="short_title" class="form-control"  value="{{$book->short_title}}"/>
+            <input type="text" name="short_title" class="form-control"  value="{{@$book->short_title}}"/>
         </div>
     </div>
     <div class="row mb-3">
@@ -41,7 +41,7 @@
             <h6 class="mb-0">Main Title</h6>
         </div>
         <div class="form-group col-sm-9 text-secondary">
-            <input type="text" name="main_title"  class="form-control" value="{{$book->main_title}}" />
+            <input type="text" name="main_title"  class="form-control" value="{{@$book->main_title}}" />
         </div>
     </div>
 
@@ -50,7 +50,7 @@
             <h6 class="mb-0">Short Description</h6>
         </div>
         <div class="form-group col-sm-9 text-secondary">
-            <input type="text" name="short_desc" class="form-control" value="{{$book->short_desc}}"  />
+            <input type="text" name="short_desc" class="form-control" value="{{@$book->short_desc}}"  />
         </div>
     </div>
 
@@ -59,7 +59,7 @@
             <h6 class="mb-0">Link Url</h6>
         </div>
         <div class="form-group col-sm-9 text-secondary">
-            <input type="text" name="link_url" class="form-control" value="{{$book->link_url}}" />
+            <input type="text" name="link_url" class="form-control" value="{{@$book->link_url}}" />
         </div>
     </div>
 
@@ -79,7 +79,7 @@
             <h6 class="mb-0">  </h6>
         </div>
         <div class="form-group col-sm-9 text-secondary">
-            <img id="showImage" src="{{ asset($book->image) }}" alt="Admin" class="rounded-circle p-1 bg-primary" width="80">
+            <img id="showImage" src="{{ asset(@$book->image) }}" alt="Admin" class="rounded-circle p-1 bg-primary" width="80">
         </div>
     </div>
 
